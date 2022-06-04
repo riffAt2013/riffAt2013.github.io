@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  	<meta name='viewport' content='width=device-width'>
+
+    <title>My Blog</title>
+    <meta name='description' content=Welcome to my blog>
+    <meta name="theme-color" content="#ffffff"/>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json" />
+
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link href="/assets/styles/tailwind.css" rel="stylesheet" />
+    <link href="/assets/styles/index.css" rel="stylesheet" />
+    <script>
+      const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDarkMode()) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+
+  <body class="dark:text-white dark:bg-black">
+    
+<div class="min-h-screen flex flex-col">
+
+<main class="flex-1 w-10/12 max-w-screen-sm md:max-w-screen-md mx-auto">
+
+  
+<p class="text-5xl md:text-6xl font-black py-10 md:py-10 leading-tight">
+ This is me<br>আমার সম্পর্কে
+</p>
+  
+<nav>
+  <ul class="flex py-2 border-b-2 mb-6 font-medium">
+    <li class="mr-6"><a href="/">Home</a></li>
+    <li class="mr-6"><a href="/tags">Tags</a></li>
+    <li class="mr-6"><a href="/about">About</a></li>
+    <li class="mr-6"><span class="cursor-pointer" id="toggleDarkMode">Dark mode</spam></li>
+  </ul>
+</nav>
+
+<div class="flex flex-col space-y-8">
+  <div class="intro font-bold text-2xl border-b-2 py-2">Hi There 👋🏽</div>
+  <div class="details">
+    I'm Rifat Masud. A fullstack web developer from Dhaka, Bangladesh. I love
+    all things related to web develpment, artificial intelligence and
+    programming. I'm specifically skilled in Javascript, ReactJS, NextJS,
+    Firebase, GraphQL, MongoDB, Python, Django, FastAI, Pytorch. <br />
+    As a student in North South University, I was a part of a Mars Rover team
+    NSU Mars Ex and led the software team to automate the rover using Python and
+    its variety of libraries (OpenCV, Pytorch, FastAI etc) in a Raspberry PI
+    environment. I helped create the official website for the team using modern
+    fullstack solutions. <br />
+    Currently looking for a job, with a view to learn, grow and help building in
+    world class web applications with probably a sprinkle of AI on top it 😉.
+  </div>
+  <div class="links">
+    <div class="text-2xl font-medium text-center pb-4 hover:animate-bounce">
+      <a
+        href="https://docs.google.com/document/d/e/2PACX-1vQE5bQIwN4cKo1XYb8kq6dgZnoABgl4WDja6Do_dEg7NhuD9UjHppaDKaPNO8uP-sR91CCfCz1Zc1kq/pub"
+        >My Resume</a
+      >
+    </div>
+  </div>
+</div>
+
+
+</main>
+
+<footer class="mt-8 bg-gray-200 dark:bg-gray-900 py-8 flex-shrink-0">
+  <div class="max-w-screen-sm md:max-w-screen-md mx-auto px-8">
+    <p class="text-sm py-2 font-semibold text-right">
+      
+        <a href=https://github.com/riffAt2013>Github</a> 
+      
+
+      
+        &middot; <a href=https://www.linkedin.com/in/randbmasud/>LinkedIn</a>
+      
+
+      
+        &middot; <a href=https://www.facebook.com/ibnemashood/>Facebook</a>
+      
+
+      
+        &middot; <a href=https://twitter.com/whatsintheboox>Twitter</a>
+      
+
+
+
+    </p>
+  </div>
+</footer>
+</div>
+
+    
+  <script>
+    document.getElementById("toggleDarkMode").addEventListener("click", function() {
+      if (isDarkMode()) {
+        localStorage.theme = 'light'
+        document.documentElement.classList.remove('dark')
+      } else {
+        localStorage.theme = 'dark'
+        document.documentElement.classList.add('dark')
+      }
+    });
+  </script>
+  </body>
+</html>
